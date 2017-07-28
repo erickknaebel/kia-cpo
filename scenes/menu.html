@@ -1,0 +1,248 @@
+<div id="mainMenu">
+	<div id="courseCode"></div>
+	<div id="courseDate"></div>
+    <div id="courseDisclaimer">Disclaimers</div>
+	<div id="menuPanelButtons">
+		<div id="startCourseButton"></div>
+		<div id="postAssessmentButton"></div>
+	</div>
+	<div id="menuContainer">
+		<div id="mod4SubMenu">
+			<div id="mod4Buttons">
+				<div id="menuButton41" class="menu-button" data-scene="4100" data-prefix="41"></div>
+				<div id="menuButton42" class="menu-button" data-scene="4200" data-prefix="42"></div>
+			</div>
+		</div>
+		<div id="moduleButtons">
+			<div id="menuButton10" class="menu-button" data-scene="1000" data-prefix="1"></div>
+			<div id="menuButton20" class="menu-button" data-scene="2000" data-prefix="2"></div>
+			<div id="menuButton30" class="menu-button" data-scene="3000" data-prefix="3"></div>
+			<div id="menuButton40" class="menu-button" data-prefix="4"></div>
+			<div id="menuButton50" class="menu-button" data-scene="5000" data-prefix="5"></div>
+			<div id="menuLegend"></div>
+		</div>
+	</div>
+</div>
+<script>
+(function(){
+	var scene = new es3.SilentScene();
+
+	scene.displayFooter		= false;
+	scene.displayCourseInfo	= false;
+
+	scene.imagesToPreload = [
+		'images/menu/menu-background.jpg',
+		'images/menu/menu-buttons.png',
+		'images/menu/legend.png',
+		'images/menu/submenu-background.png'
+	];
+
+	var $submenu		= $('#mod4SubMenu');
+	var $moduleButtons	= $('#moduleButtons>.menu-button');
+	var $subMenuButtons	= $('#mod4Buttons>.menu-button');
+	var $allMenuButtons	= $('.menu-button');
+    var $disclaimer     = $('#disclaimersPanel');
+
+	/* assigns the proper CSS class to each button based on its completion state */
+	var updateButtonStates = function()
+	{
+		$allMenuButtons.each(function(i, elem){
+			var prefix = elem.getAttribute('data-prefix');
+
+			if (prefix)
+			{
+				var average = es3.app.getAverageState(prefix);
+
+				if (average == es3.app.COMPLETED)
+					elem.className += ' completed';
+
+				else if (average > 0)
+					elem.className += ' started';
+			}
+		});
+
+	};
+
+	var enableButtons = function()
+	{
+		$allMenuButtons.on(TOUCHEVENT, clickMenuButtonHandler);
+		$('#startCourseButton').on(TOUCHEVENT, startCourseButtonHandler);
+		$('#postAssessmentButton').on(TOUCHEVENT, postAssessmentButtonHandler);
+	};
+
+	var disableButtons = function()
+	{
+		$allMenuButtons.off(TOUCHEVENT);
+		$('#startCourseButton').off(TOUCHEVENT);
+		$('#postAssessmentButton').off(TOUCHEVENT);
+	};
+
+	var clickMenuButtonHandler = function(event)
+	{
+		var button = event.target;
+
+		selectButton(button);
+		saveSelectedButtons();
+
+		if (button.id === 'menuButton40')
+		{
+			toggleSubMenu();
+		}
+		else
+		{
+			disableButtons();
+			hideSubMenu();
+			gotoScene(button);
+		}
+	};
+
+	var gotoScene = function(button)
+	{
+		var sceneId	= button.getAttribute('data-scene');
+
+		es3.app.gotoScene(sceneId);
+	};
+
+	var selectButton = function(button)
+	{
+		$subMenuButtons.filter('.selected').removeClass('selected');
+
+		if (button.id.substr(-1,1) === '0')
+		{
+			$moduleButtons.filter('.selected').removeClass('selected');
+		}
+
+		button.className += ' selected';
+	};
+
+	var saveSelectedButtons = function()
+	{
+		var names = [];
+
+		$allMenuButtons.filter('.selected').each(function(i,elem){
+			names.push(elem.id);
+			});
+
+		es3.app.selectedMenuButtons = names;
+	};
+
+	var restoreSelectedButtons = function()
+	{
+		var names = es3.app.selectedMenuButtons;
+
+		for (var i = names.length - 1; i >= 0; --i)
+		{
+			var elem = document.getElementById(names[i]);
+			elem.className += ' selected';
+		}
+
+		if (names.indexOf('menuButton40') >= 0)
+		{
+			showSubMenu(true);
+		}
+	}
+
+	var toggleSubMenu = function()
+	{
+		if ($submenu.css('display') === 'none')
+		{
+			$subMenuButtons.removeClass('selected');
+			showSubMenu();
+		}
+		else
+		{
+			hideSubMenu();
+		}
+	}
+
+	var showSubMenu = function(immediate)
+	{
+		if (immediate)
+		{
+			$submenu.css({'width':'299px', 'display':'block'});
+		}
+		else
+		{
+			$submenu.css({'width':'0px', 'display':'block'});
+			TweenMax.to($submenu[0], 0.4, {width:299});
+		}
+	};
+
+	var hideSubMenu = function()
+	{
+		TweenMax.to($submenu[0], 0.2, {width:0, onComplete:hideSubMenuComplete});
+	};
+
+	var hideSubMenuComplete = function()
+	{
+		$submenu.css('display', 'none');
+		$subMenuButtons.removeClass('selected');
+	};
+
+	var setSubMenuVisibility = function()
+	{
+		var names = es3.app.selectedMenuButtons;
+
+		if (names.indexOf('menuButton40') >= 0)
+		{
+			showSubMenu(true);
+		}
+	};
+
+	var startCourseButtonHandler = function(event)
+	{
+		disableButtons();
+
+		var button = document.getElementById('menuButton10');
+
+		selectButton(button);
+		saveSelectedButtons();
+		gotoScene(button);
+	};
+
+	var postAssessmentButtonHandler = function(event)
+	{
+		disableButtons();
+		es3.app.gotoScene('6000');
+	};
+
+    var showDisclaimer = function()
+    {
+		es3.app.showDisclaimers();
+    };
+
+	scene.onLoad = function()
+	{
+		$('#courseCode').html(es3.configuration.COURSE_CODE);
+		$('#courseDate').html('Updated: ' + es3.configuration.UPDATE_DATE);
+
+		updateButtonStates();
+
+		if (es3.app.lastButtonClicked === 'menu')
+		{
+			restoreSelectedButtons();
+			setSubMenuVisibility();
+		}
+
+        $('#courseDisclaimer').on(TOUCHEVENT, showDisclaimer);
+	};
+
+	scene.onStart = function()
+	{
+        if (es3.app.getBookmark('disclaimer') !== es3.app.COMPLETED)
+        {
+            showDisclaimer();
+            es3.app.setBookmark('disclaimer', es3.app.COMPLETED);
+        }
+
+        enableButtons();
+	};
+	
+	scene.onDispose = function()
+	{
+		disableButtons();
+	};
+
+	es3.app.setSceneObject(scene);
+})();
+</script>

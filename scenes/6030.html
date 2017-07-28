@@ -1,0 +1,39 @@
+<img src="images/text-panels/post-test.png" style="margin-left:240px;margin-top:125px;"/>
+<div class='postTestInstructions'>
+	<h1>Record Your Score</h1>
+	<p>You have completed the Post Assessment.</p>
+	<p>Select <b>MARK COMPLETE</b> to record your score and add it to your transcript.</p>
+	<div id="markCompleteButton"></div>
+</div>
+<script>
+	(function(){
+		var scene = new es3.SilentScene();
+
+		scene.disableBack = true;
+		scene.disableNext = true;
+
+		var clickMarkCompleteButton = function()
+		{
+			saveScore();
+			scene.markComplete();
+			es3.app.nextScene();
+		};
+
+		var saveScore = function()
+		{
+			var score = es3.app.getTestScore();
+
+			pipwerks.SCORM.set('cmi.core.score.raw', String(score));
+			pipwerks.SCORM.set('cmi.core.lesson_status', score >= 80 ? 'passed' : 'failed');
+			pipwerks.SCORM.set('cmi.core.exit', '');
+			pipwerks.SCORM.save();
+		};
+
+		scene.onStart = function()
+		{
+			$('#markCompleteButton').one(TOUCHEVENT, clickMarkCompleteButton);
+		};
+
+		es3.app.setSceneObject(scene);
+	})();
+</script>

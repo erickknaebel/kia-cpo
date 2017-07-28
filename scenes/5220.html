@@ -1,0 +1,57 @@
+<div class="simulationScene">
+	<div class="simulationProgress q3"></div>
+	<div class="simulationCustomer"></div>
+	<div class="simulationQuestion">
+		&ldquo;As soon as I purchased my last used vehicle, it seemed like I had to repair and replace stuff constantly. How do I know this vehicle is in good condition?&rdquo;
+	</div>
+	<div class="simulationPrompt">Choose Your Response:</div>
+	<div class="simulationChoices">
+		<div data-correct="correct">
+			<p>A 150-point inspection is used to help identify and correct any issues, including replacing major wear items like tires and brakes if they have less than 50% life remaining.</p>
+		</div>
+		<div data-correct="incorrect">
+			<p>If reliability is a major concern, it might be a good idea to look at some very reliable new Kia vehicles and see if we can work out a deal that fits your budget.</p>
+		</div>
+		<div data-correct="partial">
+			<p>All Kia CPO vehicles are thoroughly checked for issues with a 150-point inspection, performed by a Kia factory-trained technician, including a test-drive.</p>
+		</div>
+	</div>
+	<div class="simulationFeedback">
+		<div class="incorrectFeedback">
+			<h1>Try Again</h1>
+		</div>
+		<div class="partialFeedback" data-audio="5223">
+			<h1>Almost!</h1>
+			<p>
+				That&rsquo;s a good answer, but you can also point out parts that are major wear items, like tires and brakes, were inspected and have at least 50% life remaining on them, helping reduce maintenance costs in the near future.
+			</p>
+		</div>
+		<div class="correctFeedback" data-audio="5224">
+			<h1>Correct!</h1>
+			<p>
+				Each Kia CPO vehicle undergoes a thorough 150-point inspection and reconditioning process, including major wear items like tires and brakes, which must have at least 50% life remaining. This helps reduce the chances of expensive maintenance bills shortly after purchase.<br><br>
+				Select Next to proceed to the next round.
+			</p>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc5220">
+		&ldquo;As soon as I purchased my last used vehicle, it seemed like I had to repair and replace stuff constantly.
+		{5.5}How do I know this vehicle is in good condition?&rdquo;
+	</div>
+	<div id="cc5223">
+		That&rsquo;s a good answer, but you can also point out parts that are major wear items, like tires and brakes, were inspected and have at least 50% life remaining on them and that helps reduce maintenance costs in the near future.
+	</div>
+	<div id="cc5224">
+		Good job! Each Kia CPO vehicle undergoes a thorough 150-point inspection.
+		{5.7}If any issues are found, they must be corrected before certification.
+		{9.7}In addition, major wear items like tires and brakes are required to have at least 50% life remaining — helping to minimize the customer&rsquo;s risk for expensive maintenance bills shortly after purchase.
+	</div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.SimulationScene();
+	es3.app.setSceneObject(scene);
+})();
+</script>

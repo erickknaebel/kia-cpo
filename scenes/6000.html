@@ -1,0 +1,41 @@
+
+<img src="images/text-panels/post-test.png" style="margin-left:240px;margin-top:125px;"/>
+<div class='postTestInstructions'>
+	<h1>Instructions</h1>
+	<p>You may attempt this Post Assessment <b>one time</b> in the current session.</p>
+	<p>You must score at least 80% on this assessment to receive course credit.</p>
+	<p>Be sure you have mastered the course objectives before starting this assessment.</p>
+	<p>Read questions and any instructions carefully and select the correct answer(s).</p>
+	<p>Select <b>MENU</b> to view the course material.</p>
+	<p>Select <b>START POST ASSESSMENT</b> to begin.</p>
+	<div id="startButton"></div>
+</div>
+<script>
+	(function(){
+		var scene = new es3.SilentScene();
+
+		scene.disableReplay	= true;
+		scene.disableNext	= true;
+
+		scene.imagesToPreload = [
+			'images/post-test/mark-complete-button.png',
+			'images/post-test/review-exit-buttons.png',
+			'images/post-test/radio-button.png',
+			'images/post-test/review-exit-buttons.png'
+		];
+
+		var clickStartButton = function()
+		{
+			es3.app.nextScene();
+		};
+
+		scene.onStart = function()
+		{
+			scene.markComplete();
+
+			$('#startButton').one(TOUCHEVENT, clickStartButton);
+		};
+
+		es3.app.setSceneObject(scene);
+	})();
+</script>

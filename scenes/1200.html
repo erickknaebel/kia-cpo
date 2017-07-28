@@ -1,0 +1,57 @@
+<img src="images/text-panels/text-panel.png" style="position:absolute;">
+<img src="images/1000/1200-vehicles.png" style="position:absolute;top:342px;left:275px">
+<img src="images/1000/1200a.png" style="position:absolute;left:727px;top:282px" data-cue="5.6" data-cue-out="20.6" data-preload="false">
+<img src="images/1000/1200b.png" style="position:absolute;left:615px;top:282px" data-cue="12.4:1201" data-cue-out="12.4:1201" data-preload="false">
+<img src="images/1000/1200c.png" style="position:absolute;left:624px;top:482px" data-cue="20.6" data-cue-out="12.4:1201" data-preload="false">
+<div class="textcontent" style="width:335px">
+	<h1>Kia CPO – Sales Consultant Benefits:</h1>
+	<div class="build-and-replace" data-cue="5.6" data-cue-out="20.6">
+		<h2>CPO customers close faster:</h2>
+		<ul data-cue='5.6'>
+			<li>Often arrive at the dealership pre-qualified and focused in on a particular CPO vehicle and price range</li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue="20.6" data-cue-out="12.4:1201">
+		<h2>Higher transaction price:</h2>
+		<ul>
+			<li>Industry average: CPO customers will pay a $2,300 premium for certified vehicles&#42;</li>
+		</ul>
+		<p style="font-size:8pt">&#42; Source: AutoData 2012</p>
+	</div>
+	<div class="build-and-replace" data-cue="12.4:1201">
+		<h2>CPO customers:</h2>
+		<ul>
+			<li>CPO builds customer confidence</li>
+			<li>More loyal and often move up to new vehicles on next purchase</li>
+		</ul>
+	</div>
+</div>
+<aside>
+	<div id="cc1200">
+		Certified Pre-Owned vehicles also offer a lot of important benefits for Kia Sales Consultants.
+		{5.6}For one, CPO customers tend to close faster than new vehicle buyers.
+		{10.5}After extensive Internet research and comparisons, they often arrive at your dealership pre-qualified and focused in on a particular CPO vehicle and price range.
+		{20.6}Plus, CPO transaction prices are higher and offer you the opportunity for higher gross profit per sale.
+	</div>
+    <div id="cc1201">
+        In fact, industry research has found that on average, CPO buyers are willing to pay more than a $2,300 premium for the value and security of certified vehicles.
+        {12.4}And finally, CPO customers are simply great customers to have.
+        {16.9}The Kia CPO program helps build customer confidence in you, and CPO customers are more loyal and more likely to return to your dealership for their next purchase.
+        {27.9}Plus, CPO customers are far more likely than traditional used vehicle buyers to move up to a new Kia vehicle on their next purchase.
+    </div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.Scene();
+
+    scene.onSoundEnd = function() {
+        scene.play('1201', on1201Complete)
+    };
+
+    var on1201Complete = function() {
+        scene.markComplete();
+    };
+
+	es3.app.setSceneObject(scene);
+})();
+</script>

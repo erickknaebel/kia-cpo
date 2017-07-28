@@ -1,0 +1,62 @@
+<div class="knowledgeCheckContent" data-correct-audio="2112" data-incorrect-audio="incorrect">
+	<table class="buttons">
+		<tr>
+			<td class="button" id="benefits" data-load-scene="2010"></td>
+			<td class="label">Additional Benefits</td>
+		</tr>
+		<tr>
+			<td class="button" id="roadside" data-load-scene="2020"></td>
+			<td class="label">Kia 10-Year Unlimited Mileage Roadside Assistance</td>
+		</tr>
+		<tr>
+			<td class="button" id="report" data-load-scene="2030"></td>
+			<td class="label">CARFAX<sup>&reg;</sup> Vehicle History Report&trade;</td>
+		</tr>
+		<tr>
+			<td class="button" id="eligible" data-load-scene="2040"></td>
+			<td class="label">Eligible Vehicles</td>
+		</tr>
+		<tr>
+			<td class="button" id="inspection" data-load-scene="2050"></td>
+			<td class="label">150-Point Quality Assurance Inspection</td>
+		</tr>
+		<tr>
+			<td class="button" id="warranty" data-load-scene="2060" data-correct="true"></td>
+			<td class="label">10-Year/100,000-Mile Limited Powertrain Warranty</td>
+		</tr>
+	</table>
+	<div class="content">
+		<h1 class="scene-header">Knowledge Check</h1>
+		<p class="instructions">Select the Kia CPO element that BEST addresses the customer&rsquo;s statement.</p>
+		<div class="customer-statement">
+			<div class="icon"></div>
+			<p class="statement">&ldquo;I&rsquo;m hesitant on buying pre-owned. I don&rsquo;t want to be stuck with a huge bill if something major like the engine goes bad down the road.&rdquo;</p>
+		</div>
+		<div class="remediation correct">
+			<h1>Correct!</h1>
+			<h2>10-Year/100,000-Mile Limited Powertrain&nbsp;Warranty</h2>
+			<p>The fear of costly repairs is common. Kia CPO owners enjoy the added peace of mind of knowing the most expensive repair items may be covered by a <span class="nobr">10-Year/100,000-Mile</span> Limited Powertrain Warranty. This warranty covers the engine, transmission and major driveline components.
+			</p>
+		</div>
+		<div class="remediation incorrect">
+			<h1>Try Again!</h1>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc2112">
+		{1.2}
+		Well done! The fear of costly repairs is common.
+		{5.0}
+		Kia CPO owners enjoy the added peace of mind of knowing the most expensive repair items may be covered by a 10-Year/100,000-Mile Limited Powertrain Warranty.
+		{15.1}
+		This warranty covers the engine, transmission and major driveline components.
+	</div>
+</aside>
+<script>
+	(function(){
+		var scene = new es3.KnowledgeCheck();
+		scene.imagesToPreload = ['images/knowledge-check/buttons.png','images/knowledge-check/2100.png'];
+		es3.app.setSceneObject(scene);
+	})();
+</script>

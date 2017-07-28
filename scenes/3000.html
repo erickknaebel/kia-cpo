@@ -1,0 +1,56 @@
+<img src="images/text-panels/text-panel.png"/>
+<img src="images/3000/3000.jpg" style="position:absolute;top:265px;left:501px;"/>
+<div class="textcontent" style="width:335px">
+	<div id="content3000" class="build-and-replace" data-cue-out="14:3001">
+		<h1>A Different Type of Customer</h1>
+		<ul>
+			<li>Today, more and more customers shop specifically for certified <span class="nobr">pre-owned</span> vehicles</li>
+			<li>CPO buyers often use <span class="nobr">3rd-party</span> Internet sites to compare nearly identical vehicles in your market</li>
+			<li>A pre-qualified buyer:
+				<ul>
+					<li>CPO buyers often arrive at your dealership interested in a specific vehicle and price range</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div id="content3001" class="build-and-replace hidden" data-cue="14:3001">
+		<h1>In Other Words:</h1>
+		<ul>
+			<li>CPO is a great selling opportunity</li>
+			<li>If you&rsquo;re prepared to sell to unique CPO buyers&rsquo; interests!</li>
+		</ul>
+	</div>
+</div>
+<aside>
+	<div id="cc3000">
+		More and more, today&rsquo;s customers are aware of certified pre-owned vehicles and will shop for them exclusively.
+		{6.1}
+		And understanding the difference between typical CPO customers and new customers is critical to your success.
+		{12.9}
+		CPO customers tend to invest hours in Internet shopping and will compare many nearly identical vehicles in your market, often through third-party websites.
+	</div>
+	<div id="cc3001">
+		In other words, CPO buyers often will arrive at your dealership interested in a specific vehicle and price.
+		{7}
+		They are likely to know a great deal about the vehicle and they are there to verify the condition and learn about your CPO program.
+		{14}
+		Or, in other words – CPO is a great selling opportunity for you if you&rsquo;re prepared to sell to the unique interests and motivations of the CPO buyer.
+	</div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.Scene();
+	
+	scene.onSoundEnd = function()
+	{
+		scene.play('3001', on3001Complete);
+	};
+	
+	var on3001Complete = function()
+	{
+		scene.markComplete();		
+	};
+	
+	es3.app.setSceneObject(scene);
+})();
+</script>

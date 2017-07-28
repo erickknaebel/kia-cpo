@@ -1,0 +1,197 @@
+#mainMenu
+{
+	background-image:url(../images/menu/menu-background.jpg);
+	background-repeat:no-repeat;
+	width:1020px;
+	height:690px;
+}
+
+#moduleButtons
+{
+	position:absolute;
+	top:115px;
+	left:435px;
+}
+
+.menu-button
+{
+	background-image:url(../images/menu/menu-buttons.png);
+	width:255px;
+	height:62px;
+	overflow:hidden;
+	position:relative;
+	cursor:pointer;
+	margin-bottom:5px;
+}
+
+.menu-button::after
+{
+	content:"";
+	background-image:url(../images/menu/legend.png);
+	background-position:-12px -13px;
+	width:22px;
+	height:21px;
+	overflow:hidden;
+	position:absolute;
+	top:18px;
+	right:3px;
+	z-index:2;
+}
+
+.menu-button.started:after
+{
+	background-position:-12px -48px;
+}
+
+.menu-button.completed:after
+{
+	background-position:-12px -83px;
+}
+
+.menu-button:hover
+{
+	background-position-x:-255px;
+}
+
+.menu-button.selected
+{
+	background-position-x:-510px;
+}
+
+.menu-button.selected:hover
+{
+	background-position-x:-510px;
+}
+
+#menuButton10
+{
+	background-position-y:0;
+}
+
+#menuButton20
+{
+	background-position-y:-65px;
+}
+
+#menuButton30
+{
+	background-position-y:-130px;
+}
+
+#menuButton40
+{
+	background-position-y:-195px;
+}
+
+#menuButton50
+{
+	background-position-y:-260px;
+}
+
+#menuButton41
+{
+	background-position-y:-325px;
+}
+
+#menuButton42
+{
+	background-position-y:-390px;
+}
+
+#mod4SubMenu
+{
+	position:absolute;
+	left:683px;
+	top:224px;
+	width:299px;
+	height:238px;
+	background-image:url(../images/menu/submenu-background.png);
+	overflow:hidden;
+	display:none;
+}
+
+#mod4Buttons
+{
+	position:relative;
+	top:92px;
+	left:28px;
+}
+
+#menuLegend
+{
+	background-image:url(../images/menu/legend.png);
+	width:150px;
+	height:117px;
+	margin-top:30px;
+	margin-left:20px;
+}
+
+#courseCode
+{
+	position:absolute;
+	top:255px;
+	width:408px;
+	font-size:11pt;
+	font-weight:bold;
+	text-align:center;
+	color:#888;
+}
+
+#courseDate
+{
+	position:absolute;
+	width:408px;
+	bottom:80px;
+	text-align:center;
+	font-size:8pt;
+	color:#888;
+}
+
+#courseDisclaimer
+{
+    position: absolute;
+    color: #338acc;
+    font-size: 12px;
+    top: 572px;
+    left: 170px;
+    text-decoration:underline;
+}
+
+#courseDisclaimer:hover
+{
+   cursor:pointer;
+   color:#0351FF;
+}
+
+#menuPanelButtons
+{
+	position:absolute;
+	width:408px;
+	top:514px;
+	text-align:center;
+}
+
+#menuPanelButtons>div
+{
+	display:inline-block;
+	width:143px;
+	height:42px;
+	background-image:url(../images/menu/menu-buttons.png);
+	margin:0 3px;
+	cursor:pointer;
+}
+
+#menuPanelButtons>div:hover
+{
+	background-position-x:-145px;
+}
+
+#startCourseButton
+{
+	background-position:0 -455px;
+}
+
+#postAssessmentButton
+{
+	background-position:0 -500px;
+}

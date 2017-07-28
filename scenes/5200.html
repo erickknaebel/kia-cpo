@@ -1,0 +1,56 @@
+<div class="simulationScene">
+	<div class="simulationProgress q1"></div>
+	<div class="simulationCustomer"></div>
+	<div class="simulationQuestion">
+		“Purchasing used is kind of scary. I don&rsquo;t want to get stuck with a huge repair bill if something goes wrong after I buy.”
+	</div>
+	<div class="simulationPrompt">Choose Your Response:</div>
+	<div class="simulationChoices">
+		<div data-correct="incorrect">
+			<p>Kia CPO offers reimbursement for many costs that may be incurred for important services like towing, rental car and travel breakdown coverage.</p>
+		</div>
+		<div data-correct="partial">
+			<p>Major repairs are not a major concern with Kia CPO. You&rsquo;ll be covered by the confidence of a 10-Year/100,000-Mile Limited Powertrain warranty.</p>
+		</div>
+		<div data-correct="correct">
+			<p>With Kia CPO, you&rsquo;re covered with both a 1-Year/12,000-Mile Platinum Comprehensive Coverage and a 10-Year/ <span class="nobr">100,000-Mile</span> Limited Powertrain warranty.</p>
+		</div>
+	</div>
+	<div class="simulationFeedback">
+		<div class="incorrectFeedback">
+			<h1>Try Again</h1>
+		</div>
+		<div class="partialFeedback" data-audio="5203">
+			<h1>Almost!</h1>
+			<p>
+				Good answer, but remember to discuss the 1-Year/ <span class="nobr">12,000-Mile</span> Platinum Comprehensive Coverage as well as the <span class="nobr">10-Year,</span> <span class="nobr">100,000-mile</span> Limited Powertrain Warranty.
+			</p>
+		</div>
+		<div class="correctFeedback" data-audio="5204">
+			<h1>Correct!</h1>
+			<p>
+				The 1-Year/12,000-Mile Platinum Comprehensive Coverage and the 10-Year/100,000-Mile Limited Powertrain Warranty lessen the fear of costly future repairs.<br><br>
+				Select Next to proceed to the next round.
+			</p>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc5200">
+		Purchasing used is kind of scary.
+		{2.5}I don&rsquo;t want to get stuck with a huge repair bill if something goes wrong after I buy.
+	</div>
+	<div id="cc5203">
+		Good answer, but also remember to discuss the Platinum Comprehensive Coverage as well as the 10-Year, 100,000-mile Powertrain Limited Warranty.
+	</div>
+	<div id="cc5204">
+		That&rsquo;s correct!
+		The 1-Year/12,000-Mile Platinum Comprehensive Coverage and the 10-Year/100,000-Mile Limited Powertrain Warranty lessen the fear of costly future repairs.
+	</div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.SimulationScene();
+	es3.app.setSceneObject(scene);
+})();
+</script>

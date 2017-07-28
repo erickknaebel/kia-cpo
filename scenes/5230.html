@@ -1,0 +1,59 @@
+<div class="simulationScene">
+	<div class="simulationProgress q4"></div>
+	<div class="simulationCustomer"></div>
+	<div class="simulationQuestion">
+		“I like this car. But I&rsquo;ve seen a similar model at the used car lot down the street. They had it priced quite a bit less than what you&rsquo;re asking.”
+	</div>
+	<div class="simulationPrompt">Choose Your Response:</div>
+	<div class="simulationChoices">
+		<div data-correct="correct">
+			<p>Kia CPO offers value that can&rsquo;t be matched by a normal used vehicle. You&rsquo;re getting a high-quality vehicle that is backed by strong warranties and many other benefits.</p>
+		</div>
+		<div data-correct="incorrect">
+			<p>Pre-owned vehicles are all unique and many factors affect their price. That vehicle likely doesn&rsquo;t have the same low mileage or options as this vehicle.</p>
+		</div>
+		<div data-correct="partial">
+			<p>It&rsquo;s all about what you&rsquo;re getting for that price. Kia CPO vehicles offer much more value than a non-certified pre-owned.</p>
+		</div>
+	</div>
+	<div class="simulationFeedback">
+		<div class="incorrectFeedback">
+			<h1>Try Again</h1>
+		</div>
+		<div class="partialFeedback" data-audio="5233">
+			<h1>Almost!</h1>
+			<p>
+				Good response, but be sure to include details that reinforce the value of Kia CPO vehicles like the 150-point inspection and reconditioning process, Roadside Assistance, Platinum Comprehensive Coverage and the Limited Powertrain Warranty.
+			</p>
+		</div>
+		<div class="correctFeedback" data-audio="5234">
+			<h1>Correct!</h1>
+			<p>
+				Good work. Kia CPO offers value that ordinary pre-owned vehicles can touch. Low-mileage, high-quality Kia CPO vehicles are thoroughly inspected, reconditioned and then backed by benefits like Roadside Assistance, Platinum Comprehensive Coverage and a Limited Powertrain Warranty.<br><br>
+				Select Next to proceed to the next round.
+			</p>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc5230">
+		“I like this car. But I&rsquo;ve seen a similar model at the used car lot down the street.
+		{4.6}They had it priced quite a bit less than what you&rsquo;re asking.”
+	</div>
+	<div id="cc5233">
+		Good response, but be sure to include details that reinforce the value of Kia CPO vehicles like the 150-point inspection and reconditioning process,
+		{9.7}10-Year Unlimited Miles of Roadside Assistance, 1-Year/12,000-Mile Platinum Comprehensive Coverage and 10-Year/100,000-Mile Limited Powertrain Warranty.
+	</div>
+	<div id="cc5234">
+		Good work, that&rsquo;s correct.
+		{1.9}Kia CPO offers value that no ordinary pre-owned vehicle can touch.
+		{6.6}Low-mileage, high-quality Kia CPO vehicles are thoroughly inspected and reconditioned.
+		{12.7}What&rsquo;s more, these vehicles offer impressive benefits like Kia 10-Year Unlimited Miles Roadside Assistance and are backed by the 1-Year/12,000-Mile Platinum Comprehensive Coverage and 10-Year/100,000-Miles Limited Powertrain Warranty.
+	</div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.SimulationScene();
+	es3.app.setSceneObject(scene);
+})();
+</script>

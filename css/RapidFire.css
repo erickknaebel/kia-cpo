@@ -1,0 +1,129 @@
+
+/*==============================================================================
+Rapid Fire text format ========================================================*/
+
+.rapidFireContent h1,
+.rapidFireContent h2 {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+.rapidFireContent p {
+	font-style:italic;
+}
+
+.rapidFireContent .title {
+	position: absolute;
+	top: 200px;
+	left: 272px;
+	width: 500px;
+	text-align: center;
+}
+
+.rapidFireContent .rf-statement {
+	font-style: italic;
+	position: absolute;
+	top: 235px;
+	width: 400px;
+	margin-left: 317px;
+	text-align: center;
+}
+
+/*==============================================================================
+Rapid fire scenes =============================================================*/
+
+.rapidFireContent .title {
+	/*
+	visibility: hidden;
+	opacity: 0;
+	*/
+}
+
+.rapidFireContent .backgrounds {
+	position: absolute;
+	top: 100px;
+	padding: 20px;
+	width: 1020px;
+	height:560px;
+	background: url(../images/3100/3100.png)top center no-repeat;
+}
+
+.rapidFireContent .scene{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+
+}
+
+.rapidFireContent .scene.scene3100{
+	visibility: visible;
+	opacity: 1;
+}
+
+.rapidFireContent .scene.scene3110 {
+	padding-top: 200px;
+	padding-left: 260px;
+	width:500px;
+	position: absolute;
+}
+
+.rapidFireContent .scene #new-customer,
+.rapidFireContent .scene #cpo-customer {
+	width: 210px;
+	margin: 0 20px;
+	float: left;
+	display: inline-block;
+
+}
+
+/*==============================================================================
+Rapid fire buttons ============================================================*/
+
+.rapidFireContent .buttons {
+	position: absolute;
+	top: 320px;
+	left: 260px;
+	width: 518px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.rapidFireContent .button {
+	width:143px;
+	height:42px;
+	display:inline-block;
+	background:url(../images/3100/buttons.png)top left no-repeat;
+}
+
+.rapidFireContent .button#cpo {
+	position: absolute;
+	left:300px;
+	background-position-x: -143px;
+}
+
+.rapidFireContent .button#new {
+	position: absolute;
+	left:90px;
+	background-position-x: -286px;
+}
+
+.rapidFireContent .button#start {
+	position: absolute;
+	top: 350px;
+	left: 440px;
+}
+
+.rapidFireContent .button.enabled#start:hover,
+.rapidFireContent .button.enabled#cpo:hover,
+.rapidFireContent .button.enabled#new:hover{
+	cursor: pointer;
+	background-position-y:-42px;
+}
+
+.rapidFireContent .button.incorrect {
+	background-position-y:-126px;
+}
+
+.rapidFireContent .button.correct {
+	background-position-y:-84px;
+}

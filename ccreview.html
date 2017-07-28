@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kia CC Review</title>
+	<style>
+/* reset */
+html, body, div, span,
+h1, h2, p,
+a, em, img, small, strike, strong, sup, sub,
+b, u, i,
+ol, ul, li,
+table, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, hgroup,
+menu, nav, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html
+{
+	font-family:arial,helvetica,san-serif;
+	font-size:13pt;
+	color:#000;
+	background-color:#D2E0EB;
+}
+
+body
+{
+	line-height: 1.2em;
+	background: #FFF;
+	-webkit-font-smoothing:antialiased;
+	text-rendering: optimizeLegibility;
+	background-color:#D2E0EB;
+	position:relative;
+	font-size:13pt;
+	color:#464646;
+}
+
+aside	/* used for closed captions */
+{
+	display:none;
+}
+
+sup
+{
+	position: relative;
+	vertical-align:text-top;
+	top:0.6em;
+	line-height:0;
+	font-size: 7pt;
+}
+
+em,b
+{
+	font-weight:bold;
+}
+
+i
+{
+	font-style:italic;
+}
+
+#page
+{
+	height:100%;
+	width:1020px;
+	padding:25px;
+}
+
+#ccContainer
+{
+	height:100%;
+	width: 920px;
+	background-color: rgba(0,0,0,0.75);
+	color: #FFF;
+	margin:0 auto;
+	text-align: center;
+	font-size: 10pt;
+	border-radius: 8px;
+	padding: 16px 20px;
+	line-height: 1.2em;
+}
+
+#ccContainer>h1
+{
+	font-weight:bold;
+	text-align:left;
+	border-top:1px solid #999;
+	margin-top:1em;
+}
+
+#ccContainer>p
+{
+	margin-bottom:0.5em;
+}
+
+.nobr
+{
+	white-space:nowrap;
+}
+
+</style>
+<script src="js/libs/jquery-2.0.3.min.js"></script>
+<script src="js/config.js"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="ccContainer">
+			Loading... please wait
+		</div>
+	</div>
+</body>
+</html>
+<script>
+var fileContents	= [];
+var scenesLeft		= 0;
+
+$(document).ready(loadScenes);
+
+function loadScenes()
+{
+	var SCENES	= es3.configuration.SCENES;
+	var COUNT	= SCENES.length;
+
+	scenesLeft	= COUNT;
+
+	for (var i = 0; i < COUNT; ++i)
+	{
+		$.ajax({
+			url:'scenes/' + SCENES[i] + '.html',
+			success:onSuccess
+			});
+	}
+}
+
+function onSuccess(data)
+{
+	fileContents.push(data);
+
+	if (--scenesLeft == 0)
+	{
+		allFilesLoaded();
+	}
+}
+
+function allFilesLoaded()
+{
+	var cc = getCCData();
+
+	$('#ccContainer').html(cc.join(''));
+
+	fileContents = null;
+}
+
+// Returns an array of closed caption scene content, in scene ID order.
+function getCCData()
+{
+	var html	= $('<div>' + fileContents.join('') + '</div>');
+	var scenes	= [];
+
+	html.find('aside>div').each(function(i, elem){
+
+		var sceneId 	= elem.id.substr(2);
+		var title		= '<h1>' + sceneId + '</h1>\n';
+
+		var rawText		= elem.innerHTML;
+		var paragraphs	= rawText.replace(/\{\d+\.*\d*\}/g, '</p>\n<p>');	// Split text into paragraphs at each time code
+		var combined	= '<p>' + paragraphs + '</p>\n';
+
+		scenes.push({id:sceneId, content:title + combined});
+	});
+
+	scenes.sort(function(a,b){ return a.id - b.id; });
+
+	var cc = [];
+
+	for (var i = 0; i < scenes.length; ++i)
+	{
+		cc[i] = scenes[i].content;
+	}
+
+	return cc;
+}
+</script>

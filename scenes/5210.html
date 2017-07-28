@@ -1,0 +1,55 @@
+<div class="simulationScene">
+	<div class="simulationProgress q2"></div>
+	<div class="simulationCustomer"></div>
+	<div class="simulationQuestion">
+		“I&rsquo;ve always been leery of buying a used car when I don&rsquo;t know the previous owner. You may have fixed it up, but this vehicle might have been in a bad accident and how do I know if it&rsquo;s been properly maintained?”
+	</div>
+	<div class="simulationPrompt">Choose Your Response:</div>
+	<div class="simulationChoices">
+		<div data-correct="partial">
+			<p>The provided Vehicle History Report provides the peace of mind that comes from a complete record of ownership, title transfers and even verifies the odometer reading.</p>
+		</div>
+		<div data-correct="incorrect">
+			<p>You can travel in complete confidence because Kia CPO vehicles are covered by travel and breakdown benefits with reimbursement for towing, rental cars and related expenses.</p>
+		</div>
+		<div data-correct="correct">
+			<p>The Vehicle History Report provides a detailed report on ownership, major accidents reported, rebuilds, or buy-backs and even service history when known.</p>
+		</div>
+	</div>
+	<div class="simulationFeedback">
+		<div class="incorrectFeedback">
+			<h1>Try Again</h1>
+		</div>
+		<div class="partialFeedback" data-audio="5213">
+			<h1>Almost!</h1>
+			<p>
+				That&rsquo;s a good response, but be sure to also tell the customer that the Vehicle History Report will include information on major damage or accidents reported to insurance as well as rebuilds, buy-backs and even the vehicle&rsquo;s service history when it&rsquo;s known.
+			</p>
+		</div>
+		<div class="correctFeedback" data-audio="5214">
+			<h1>Correct!</h1>
+			<p>
+				Right on. For added peace of mind, the Vehicle History Report provided with all Kia CPO vehicles includes information on major damage or accidents reported to insurance as well as rebuilds, buy-backs and even the vehicle&rsquo;s service history when it&rsquo;s known.<br><br>
+				Select Next to proceed to the next round.
+			</p>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc5210">
+		“I&rsquo;ve always been leery of buying a used car when I don&rsquo;t know the previous owner.
+		{3.3}You may have fixed it up, but this vehicle might have been in a bad accident and how do I know if it&rsquo;s been properly maintained?”
+	</div>
+	<div id="cc5213">
+		That&rsquo;s a good response, but be sure to also tell the customer that the Vehicle History Report will include information on major damage or accidents reported to insurance as well as rebuilds, buy-backs and even the vehicle&rsquo;s service history when it&rsquo;s known.
+	</div>
+	<div id="cc5214">
+		Right on. For added peace of mind, the Vehicle History Report provided with all Kia CPO vehicles includes information on major damage or accidents reported to insurance as well as rebuilds, buy-backs and even the vehicle&rsquo;s service history when it&rsquo;s known.
+	</div>
+</aside>
+<script>
+	(function(){
+		var scene = new es3.SimulationScene();
+		es3.app.setSceneObject(scene);
+	})();
+</script>

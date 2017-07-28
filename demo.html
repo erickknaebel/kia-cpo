@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kia Selling CPO</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/ClickToPresent.css"/>
+	<link rel="stylesheet" type="text/css" href="css/KnowledgeCheck.css"/>
+	<link rel="stylesheet" type="text/css" href="css/RapidFire.css"/>
+	<link rel="stylesheet" type="text/css" href="css/simulation.css"/>
+	<link rel="stylesheet" type="text/css" href="css/PostTest.css"/>
+	<link rel="stylesheet" type="text/css" href="css/splash.css"/>
+	<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="css/5000.css"/>
+	<script src="js/libs/modernizr.js"></script>
+	<script src="js/libs/jquery-2.0.3.min.js"></script>
+	<script src="js/libs/greensock/TweenMax.min.js"></script>
+	<script src="js/libs/image_preloader.js"></script>
+	<script src="js/libs/SCORM_API_wrapper.js"></script>
+	<script src="js/soundmanager/script/soundmanager2-nodebug-jsmin.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/es3/App.js"></script>
+	<script src="js/es3/Sound.js"></script>
+	<script src="js/es3/SilentScene.js"></script>
+	<script src="js/es3/Scene.js"></script>
+	<script src="js/es3/VideoScene.js"></script>
+	<script src="js/es3/ClickToPresent.js"></script>
+	<script src="js/es3/KnowledgeCheck.js"></script>
+	<script src="js/es3/RapidFire.js"></script>
+	<script src="js/es3/PostTestScene.js"></script>
+	<script src="js/es3/SimulationScene.js"></script>
+</head>
+<body ontouchstart="">
+	<div id="viewport">
+		<div id="sceneContainer"></div>
+        <div id="courseInfo">
+            <img src="images/shell/kia_logo.png" id="kia_logo">
+            <div id="courseTitle"><b>Selling CPO</b> | <span id="bannerCourseCode"></span></div>
+            <div id="breadcrumb"></div>
+        </div>
+		<div id="modal"></div>
+		<header>
+			<nav>
+				<a id="homeButton"></a>
+				<a id="glossaryButton" class="active"></a>
+				<a id="resourcesButton" class="active"></a>
+				<a id="helpButton" class="active"></a>
+				<a id="exitButton" class="active"></a>
+			</nav>
+			<div id="sceneId">&nbsp;</div>
+		</header>
+		<div id="ccContainer">There is no audio.</div>
+		<footer>
+			<div id="topicProgress">
+				<div id="topicProgressBar"></div>
+			</div>
+			<nav>
+				<div id="menuButton" class="footerButton active"></div>
+				<div id="courseProgress">
+					<div id="courseProgressFill"></div>
+					<label>COURSE PROGRESS</label>
+				</div>
+				<div id="courseProgressPercent">0%</div>
+				<div id="footerIconContainer">
+					<div id="ccButton" class="active"></div>
+					<div id="muteButton" class="active"></div>
+					<div id="fullScreenButton" class="active"></div>
+				</div>
+				<div id="pauseButton" class="footerButton"></div>
+				<div id="footerDivider1" class="footerDivider"></div>
+				<div id="replayButton" class="footerButton"></div>
+				<div id="footerDivider2" class="footerDivider"></div>
+				<div id="backButton" class="footerButton"></div>
+				<div id="footerDivider3" class="footerDivider"></div>
+				<div id="nextButton" class="footerButton"></div>
+			</nav>
+		</footer>
+		<img id="loadergif" src="images/loader.gif">
+		<div id="helpPanel" class="panel">
+			<h1>HELP</h1>
+			<div class="overlayClose"></div>
+			<img src="images/help.jpg"/>
+		</div>
+		<div id="disclaimersPanel" class="panel">
+			<div class="overlayClose"></div>
+			<h1>DISCLAIMERS</h1>
+			<p>The content of this course is intended for informational and educational purposes only. Any reliance placed on such information is, therefore, strictly at your own risk. In no event will Kia Motors America, Inc. (&ldquo;KMA&rdquo;) be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with the use of this course.</p>
+			<p>While KMA makes all reasonable efforts to ensure that all course materials are correct, accuracy cannot be guaranteed, and KMA does not assume any responsibility for the accuracy, completeness or authenticity of any information contained in these course materials. All information contained herein was accurate and correct at the time of publishing.</p>
+			<p>This course does not represent a commitment on the part of KMA or any companies mentioned. All materials are provided without any warranty whatsoever. Nothing in this course is intended as a guarantee of success.</p>
+			<p>From time to time, Kia Motors America may need to update or make changes to the vehicle features and other vehicle information reported in this web course. Some vehicles shown may include optional equipment. KMA, by the publication and dissemination of this material, does not create any warranties, either expressed or implied to any Kia products. For the most up-to-date information, please see the Mobile PRG at <a href="http://www.m.kiauniversity.com" target="_blank"> http://m.kiauniversity.com</a></p>
+			<p>Reproduction of the contents of this material without the expressed written approval of KMA is prohibited. &copy; 2013 Kia Motors America, Inc. All Rights Reserved.</p>
+			<p>The Kia 10-year/100,000-mile warranty program includes various warranties and roadside assistance. Warranties include powertrain and the New Vehicle Limited Warranty (Basic). All warranties and roadside assistance are limited. See retailer for details or go to kia.com.</p>
+		</div>
+		<div id="glossaryPanel" class="panel">
+			<div class="overlayClose"></div>
+			<h1>GLOSSARY</h1>
+			<p class="instructions">There are no glossary terms for this course.</p>
+		</div>
+		<div id="resourcesPanel" class="panel">
+			<div class="overlayClose"></div>
+			<h1>RESOURCES</h1>
+			<p class="instructions">Select a resource to download:</p>
+			<table>
+				<tr id="resource1">
+					<td><img src="images/pdf-icon.png"></td>
+					<td>Kia CPO Customer Brochure</td>
+				</tr>
+                <tr id="resource2">
+                    <td><img src="images/pdf-icon.png"></td>
+                    <td>Kia CPO Window Sticker</td>
+                </tr>
+                <tr id="resource3">
+                    <td><img src="images/pdf-icon.png"></td>
+                    <td>Kia CPO Best Practices</td>
+                </tr>
+			</table>
+		</div>
+		<div id="exitPanel" class="panel">
+			<h1>EXIT COURSE</h1>
+			<p class="instructions">Are you sure you want to exit?</p>
+			<table>
+				<tr>
+					<td>
+						YES<br>
+						<span id="exitYesIcon">&nbsp;</span>
+					</td>
+					<td>
+						NO<br>
+						<span id="exitNoIcon">&nbsp;</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<img src="images/text-panels/text-panel.png"/>
+<img src="images/4000/4200-1.png" style="position:absolute;top:264px;left:220px"  data-cue-out='0.3:4201' />
+<img src="images/4000/4200-2.png" style="position:absolute;top:128px;left:514px" data-cue='0.3:4201' data-cue-out='0.3:4202' />
+<img src="images/4000/4200-3.png" style="position:absolute;top:264px;left:400px" data-cue='0.3:4202' />
+<div class="textcontent" style="width:335px">
+	<h1>The Kia CPO Delivery Experience</h1>
+	<div class="build-and-replace" data-cue-out='23.7'>
+		<h2>Kia CPO buyers expect:</h2>
+		<ul>
+			<li>A purchase and delivery experience just like a <span class="nobr">new-vehicle customer</span></li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue="23.7" data-cue-out='0.3:4201'>
+		<h2>Before the delivery:</h2>
+		<ul>
+			<li>Verify pre-delivery inspection, cleanliness and ideal operating condition</li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue="0.3:4201" data-cue-out='0.3:4202'>
+		<h2>During the delivery:</h2>
+		<ul>
+			<li>Use Kia CPO Customer Delivery Worksheet</li>
+			<li>Review CPO documentation and <span class="nobr">150-point</span> inspection checklist</li>
+			<li>Review maintenance schedules and warranty booklet</li>
+			<li>Conduct a thorough orientation to the vehicle’s features and operations</li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue="0.3:4202">
+		<h2>Delivery wrap-up:</h2>
+		<ul>
+			<li>Introduce the customer to your service department</li>
+			<li>Review the customer satisfaction survey</li>
+			<li>Provide your business card and review the Kia Delivery First Pledge</li>
+		</ul>
+	</div>
+</div>
+<aside>
+	<div id="cc4200">
+		Kia CPO buyers expect and appreciate a purchase and a vehicle delivery process that’s just as thorough, professional and detailed as new vehicle customers receive.
+		{11.1}This is also a great chance to cement your relationship with the customer, earn referrals and help ensure they come back to you for their next Kia purchase.
+		{19.8}And just as with new-vehicle delivery, preparation is key.
+		{23.7}Before the delivery, verify that the pre-delivery inspection is complete and the vehicle is superbly clean and in ideal operating condition.
+
+	</div>
+    <div id="cc4201">
+        {0.4}Once your customer has arrived to take delivery, use the Kia CPO Customer Delivery Worksheet to guide your presentation.
+        {7.6}Review all CPO documentation including the completed 150-point inspection checklist, maintenance schedules and CPO warranty folio.
+        {17.4}From there, conduct a thorough orientation of the vehicle’s features and operations like seat adjustments, lighting controls, infotainment, and HVAC systems.
+    </div>
+    <div id="cc4202">
+        {0.3}You can wrap up the delivery in style by introducing your customer to your service department and explain how to schedule an appointment.
+        {7.8}Also be sure to prepare the customer for the CPO customer satisfaction phone survey they will receive, and encourage them to take part and rate their level of satisfaction with the CPO experience.
+        {20.4}Finally, wrap up by providing your business card and reinforcing your commitment by reviewing the Kia Delivery First Pledge.
+    </div>
+</aside>
+<script>
+(function(){
+
+	var scene = new es3.Scene();
+
+    scene.onSoundEnd = function () {
+        scene.play('4201', on4201Complete)
+    };
+
+    var on4201Complete = function () {
+        scene.play('4202', on4202Complete)
+    };
+
+    var on4202Complete = function() {
+        scene.markComplete();
+    };
+
+    es3.app.setSceneObject(scene);
+
+})();
+</script>

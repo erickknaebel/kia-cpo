@@ -1,0 +1,86 @@
+<img src="images/text-panels/post-test.png" style="margin-left:240px;margin-top:125px;"/>
+<div class="postTestInstructions">
+	<h1>Results</h1>
+	<div class="passed">
+		<p>Congratulations<span id="user_name"></span>! You have passed this Kia Selling CPO course.</p>
+		<p><b>Your Score:</b> <span class="score"></span></p>
+		<p>You may review any missed question by selecting the <b>REVIEW</b> button below or select the <b>EXIT</b> button to return to Kia University and try again.
+		</p>
+	</div>
+	<div class="failed">
+		<p>You missed too many questions. A score of 80% or higher is needed to pass this course. You will be limited to <span id="remainingTries">10 more tries</span>.</p>
+		<p><b>Your Score:</b> <span class="score"></span></p>
+		<p>You may review any missed question by selecting the <b>REVIEW</b> button below or select the <b>EXIT</b> button to return to Kia University and try again.
+		</p>
+	</div>
+	<div id="reviewButton"></div>
+</div>
+<script>
+(function(){
+	var scene = new es3.SilentScene();
+
+	scene.disableBack = true;
+	scene.disableNext = true;
+
+	var clickReviewButton = function()
+	{
+		es3.app.nextScene();
+	};
+
+	var insertText = function(id, text)
+	{
+		var elem = document.getElementById(id);
+
+		if (elem)
+			elem.innerHTML = text;
+	};
+
+	var showScore = function()
+	{
+		var score			= es3.app.getTestScore();
+		var elementToRemove = score >= 80 ? '.failed' : '.passed';
+
+		$(elementToRemove).remove();
+		$('.score').html(score + '%');
+	};
+
+	var showUserName = function()
+	{
+		var username = pipwerks.SCORM.get('cmi.core.student_name');
+
+		if (username !== 'null' && username !== '')
+		{
+			insertText('user_name', ' ' + username);
+		}
+	};
+
+	var showTries = function()
+	{
+		var maxTries		= pipwerks.SCORM.get('cmi.student_data.max_tries_allowed');
+		var completedTries	= pipwerks.SCORM.get('cmi.student_data.tries_completed');
+
+		maxTries		= (maxTries === 'null' || maxTries === '') ? 1 : parseInt(maxTries, 10);
+		completedTries	= (completedTries === 'null' || completedTries === '') ? 1 : parseInt(completedTries, 10);
+
+		var remainingTries		= maxTries - completedTries;
+		var remainingTriesLabel	= remainingTries == 1 ? ' more try' : ' more tries';
+
+		insertText('remainingTries',	remainingTries + remainingTriesLabel);
+	};
+
+	scene.onLoad = function()
+	{
+		showScore();
+		showUserName();
+		showTries();
+	};
+
+	scene.onStart = function()
+	{
+		$('#reviewButton').one(TOUCHEVENT, clickReviewButton);
+		scene.markComplete();
+	};
+
+	es3.app.setSceneObject(scene);
+})();
+</script>

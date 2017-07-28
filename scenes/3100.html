@@ -1,0 +1,117 @@
+<div class="rapidFireContent" data-positive-audio="correct" data-negative-audio="incorrect" data-conclusion-audio="3110,3111,3112,3113">
+	<div class="backgrounds">
+	</div>
+	<div class="buttons">
+		<div class="button" id="cpo"></div>
+		<div class="button" id="new"></div>
+	</div>
+	<h1 class="title">New Vs. CPO Survey</h1>
+	<div class="scene scene3100">
+		<p class="rf-statement">Answer each survey question by selecting the group you feel the statement belongs to.</p>
+		<div class="button enabled" id="start" data-cue="18.3"></div>
+	</div>
+	<div class="scene scene3101" data-correct="new">
+		<div class="rf-statement">
+			<p>Focus mostly on the vehicle&rsquo;s style, technology, performance and price.</p>
+		</div>
+	</div>
+	<div class="scene scene3102" data-correct="cpo">
+		<div class="rf-statement">
+			<p>Focus on the vehicle&rsquo;s history, condition and warranty.</p>
+		</div>
+	</div>
+	<div class="scene scene3103" data-correct="cpo">
+		<div class="rf-statement">
+			<p>Typically loyal to brand <span class="nobr">and/or</span> dealership.</p>
+		</div>
+	</div>
+	<div class="scene scene3104" data-correct="new">
+		<div class="rf-statement">
+			<p>Will cross-shop many dealers for the best deal.</p>
+		</div>
+	</div>
+	<div class="scene scene3105" data-correct="cpo">
+		<div class="rf-statement">
+			<p>Seeking justification to pay a higher price than a traditional used vehicle.</p>
+		</div>
+	</div>
+	<div class="scene scene3110">
+		<h1>New vs. CPO Survey: Debrief</h1>
+		<div id="new-customer">
+			<h2>New-Vehicle Customer</h2>
+			<ul>
+				<li data-cue="2.4:3110">Focus mostly on the vehicle&rsquo;s style, technology, performance and price</li>
+				<li data-cue="16.2:3111">Will <span class="nobr">cross-shop</span> many dealers for the best deal</li>
+				<li data-cue="20.6:3112">Extremely <span class="nobr">well-informed,</span> performing extensive research online</li>
+			</ul>
+		</div>
+		<div id="cpo-customer">
+			<h2>CPO Customer</h2>
+			<ul>
+				<li data-cue="22.8:3110">Focus on the vehicle&rsquo;s history, condition and warranty</li>
+				<li data-cue="0.5:3111">Typically loyal to brand <span class="nobr">and/or dealership</span></li>
+				<li data-cue="4.5:3112">Seeking the justification to pay a higher price than a traditional used vehicle</li>
+				<li data-cue="20.6:3112">Extremely <span class="nobr">well-informed,</span> performing extensive research online</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<aside>
+	<div id="cc3100">
+		In this exercise, you&rsquo;ll be given a quick series of statements that belong to either a <span class="nobr">new-vehicle</span> or certified pre-owned vehicle buyer.
+		{7.6}Answer each survey question by selecting the group you feel the statement belongs to.
+		{12.6}Relax, you&rsquo;re not being graded, just answer with your opinion.
+		{16.0}We&rsquo;ll debrief the results when you&rsquo;re done.
+		{18.3}Select START to begin.
+	</div>
+	<div id="cc3110">
+		Okay, let&rsquo;s take a look at the results…
+		{2.4}
+		The first statement is typically true of new-car buyers.
+		{5.7}
+		They tend to focus on the emotional aspects of a vehicle&rsquo;s styling, having the latest technology, performance and of course, price.
+		{14.0}
+		With certified pre-owned customers, a vehicle is often more of a need than a want purchase, so they are fittingly more skeptical and practical.
+		{22.8}
+		They tend to focus on the vehicle&rsquo;s history, its condition and the warranty coverage.
+		{28.1}
+		Since all new vehicles come with comprehensive warranties, this peace of mind is not as high of a priority for new customers.
+	</div>
+	<div id="cc3111">
+		{1.0}
+		Next, CPO customers tend to be more brand loyal than new-car buyers during the shopping process.
+		{6.9}
+		Once a CPO customer arrives at your dealership, they have likely already decided on a Kia model and simply want to inspect the condition of your specific vehicle.
+		{16.2}
+		On the other hand, new-vehicle buyers will cross-shop many dealers for the best possible deal.
+		{22.9}
+		Since new cars are more directly comparable to each other, it is easier for them to drive the price down through dealer competition.
+	</div>
+	<div id="cc3112">
+		{0.8}
+		CPO buyers have likely narrowed down their list to just a few select vehicles and are seeking the justification to pay the higher price a CPO vehicle commands.
+		{9.8}
+		They expect to pay more, but their expectations are also much higher.
+		{14.2}
+		These customers expect a &ldquo;like-new&rdquo; vehicle and the same level of service a new-car buyer would receive.
+		{20.6}
+		And, one final thing that both buyers have in common: They are extremely well-informed — performing extensive research online before ever stepping onto your lot.
+	</div>
+	<div id="cc3113">
+		This is why it is critical that you are well-versed on both your product information and Kia CPO&rsquo;s standout features and benefits.
+		{8.75}
+		In the next module, we&rsquo;ll be taking a closer look at how to weave the impressive benefits and value of Kia CPO throughout the customer experience.
+	</div>
+</aside>
+<script>
+	(function(){
+		var scene = new es3.RapidFire();
+
+		if(es3.configuration.DEBUG_MODE)
+		{
+			$('#start').css({opacity:1, visibility:'visible'})
+		}
+
+		es3.app.setSceneObject(scene);
+	})();
+</script>

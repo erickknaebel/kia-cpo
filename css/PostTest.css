@@ -1,0 +1,198 @@
+
+.postTestContent
+{
+	background:url(../images/post-test/question-background.jpg) top left no-repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 642px;
+	width: 1020px;
+}
+
+.postTestContent .source
+{
+	display:none;
+	visibility: hidden;
+}
+
+.postTestContent .statement
+{
+	position: absolute;
+	top: 150px;
+	width: 445px;
+	left: 246px;
+	font-size: 14pt;
+	padding: 0 40px;
+	line-height: 1.4;
+}
+
+.postTestContent table.choices
+{
+	position: absolute;
+	left: 246px;
+	top: 270px;
+}
+
+.postTestContent table.choices tr
+{
+	height:70px;
+	border-top: 1px solid #CCC;
+	}
+
+.postTestContent table.choices tr td
+{
+	 vertical-align: middle;
+	 width: 50px;
+}
+
+.no-touch .postTestContent table.choices tr.active:hover
+{
+	background:rgba(67,136,179,0.45);
+	cursor:pointer;
+}
+
+.postTestContent table.choices tr.selected
+{
+	background:rgba(67,136,179,0.45);
+}
+
+.postTestContent table.choices tr.selected .icon div
+{
+	background-position:center left;
+}
+
+.postTestContent table.choices tr td:nth-child(2)
+{
+	width: 435px;
+	padding-right: 20px;
+}
+
+.postTestContent table.choices .icon
+{
+	padding-left: 20px;
+}
+
+.postTestContent table.choices .icon div
+{
+	background-image:url(../images/post-test/radio-button.png);
+	background-position:top left;
+	width: 28px;
+	height: 28px;
+}
+
+.postTestInstructions
+{
+	position: absolute;
+	width: 482px;
+	left: 248px;
+	top: 132px;
+	padding: 20px;
+}
+
+.postTestInstructions>h1
+{
+	font-size:22pt;
+}
+
+.postTestInstructions>p
+{
+	text-align: left;
+	margin:0 auto 0.8em auto;
+}
+
+/* 6000 */
+
+#startButton
+{
+	background-image:url(../images/post-test/start-post-test-button.png);
+	background-repeat:no-repeat;
+	width:151px;
+	height:62px;
+	cursor:pointer;
+	margin: 3em auto 0 auto;
+}
+
+.no-touch #startButton:hover,
+#startButton:active
+{
+	background-position-y:-62px;
+}
+
+/* 6030 */
+
+#markCompleteButton
+{
+	background-image:url(../images/post-test/mark-complete-button.png);
+	width: 142px;
+	height: 57px;
+	margin-left: 436px;
+	margin: 3em auto 0 auto;
+	cursor:pointer;
+}
+
+.no-touch #markCompleteButton:hover,
+#markCompleteButton:active
+{
+	background-position:bottom left;
+}
+
+/* 6040 */
+
+#user_name
+{
+	font-weight:bold;
+}
+
+#reviewButton
+{
+	height:42px;
+	width:143px;
+	background-image:url(../images/post-test/review-exit-buttons.png);
+	background-position: top right;
+	margin: 3em auto 0 auto;
+	cursor:pointer;
+}
+
+.no-touch #reviewButton:hover,
+#reviewButton:active
+{
+	background-position: bottom right;
+}
+
+/* 6060 */
+
+#scene6060>h1 {
+	position: absolute;
+	top: 152px;
+	left: 264px;
+}
+
+#scene6060 section {
+	position: absolute;
+	top: 200px;
+	left: 261px;
+	max-height: 363px;
+	overflow-y: auto;
+	width: 510px;
+	font-size:13pt;
+}
+
+#scene6060 article {
+	margin-bottom:15px;
+	border-bottom: 1px solid #CCC;
+}
+
+#scene6060 article p {
+	width: 412px;
+	padding: 0 40px;
+	margin:0;
+	line-height: 1.4;
+}
+
+#scene6060 article cite {
+	padding: 20px 40px;
+	margin-right: 10px;
+	font-style:normal;
+	font-size:11pt;
+	display:block;
+}

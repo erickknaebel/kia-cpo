@@ -1,0 +1,161 @@
+/*==============================================================================
+Knowledge Check font styles ===================================================*/
+
+.knowledgeCheckContent h1,
+.knowledgeCheckContent h2,
+.knowledgeCheckContent .correct,
+.knowledgeCheckContent .incorrect {
+	color:#338ac0;
+}
+
+.knowledgeCheckContent .scene-header
+{
+	font-size:24pt;
+}
+
+.knowledgeCheckContent h1 {
+	font-size:20pt;
+}
+
+.knowledgeCheckContent h2 {
+	font-size:16pt;
+	margin-bottom: 10px;
+}
+
+.knowledgeCheckContent p{
+	font-size:12pt;
+}
+
+/*==============================================================================
+Knowledge Check general element styles ========================================*/
+
+.knowledgeCheckContent .content
+{
+	background:url('../images/knowledge-check/2100.png')top left no-repeat;
+	position: relative;
+	padding-left: 200px;
+	padding-top: 59px;
+	width: 1003px;
+	height: 480px;
+	top: 100px;
+}
+
+.knowledgeCheckContent .instructions {
+	font-style:italic;
+	font-size:10pt;
+}
+
+.knowledgeCheckContent .icon
+{
+	background:url('../images/knowledge-check/buttons.png')top left no-repeat;
+	width:53px;
+	height:53px;
+	background-position-y:-106px;
+}
+
+.knowledgeCheckContent .customer-statement
+{
+	width: 376px;
+}
+
+.knowledgeCheckContent .statement
+{
+	position: relative;
+	width: 376px;
+	top: -50px;
+	left: 70px;
+	font-weight: bold;
+}
+
+/*==============================================================================
+Knowledge Check remediation style =============================================*/
+
+.knowledgeCheckContent .remediation.correct,
+.knowledgeCheckContent .remediation.incorrect
+{
+	position: absolute;
+	width: 385px;
+	padding: 20px;
+	top:220px;
+	visibility: hidden;
+	opacity :0;
+	background: white;
+}
+
+.knowledgeCheckContent .remediation.correct
+{
+	border: 1px solid #CCC;
+}
+
+
+/*==============================================================================
+Knowledge Check  buttons ======================================================*/
+
+.buttons {
+	position: absolute;
+	top: 186px;
+	left: 682px;
+	z-index: 1;
+}
+
+.buttons .button {
+	background:url(../images/knowledge-check/buttons.png)top left no-repeat;
+	width: 53px;
+	height: 53px;
+}
+
+.knowledgeCheckContent .buttons #benefits{
+	background-position-x:-265px;
+}
+
+.knowledgeCheckContent .buttons #roadside{
+	background-position-x:-159px;
+}
+
+.knowledgeCheckContent .buttons #report{
+	background-position-x:-53px;
+}
+
+.knowledgeCheckContent .buttons #eligible{
+	background-position-x:0px;
+}
+
+.knowledgeCheckContent .buttons #inspection{
+	background-position-x:-106px;
+}
+
+.knowledgeCheckContent .buttons #warranty{
+	background-position-x:-212px;
+}
+
+.knowledgeCheckContent .buttons .label
+{
+	font-size: 10pt;
+	vertical-align: middle;
+	width: 144px;
+	line-height: 1.2;
+}
+
+/*==============================================================================
+Knowledge Check button states =================================================*/
+
+.no-touch .knowledgeCheckContent .button.enabled:hover {
+	cursor:pointer;
+	background-position-y:-53px;
+}
+
+.knowledgeCheckContent .buttons .button.active {
+	background-position-y:-53px;
+}
+
+.knowledgeCheckContent .buttons .button.selected {
+	background-position-y:-53px;
+}
+
+.knowledgeCheckContent .buttons .button.correct {
+	background-position-y:-106px;
+}
+
+.knowledgeCheckContent .buttons .button.incorrect {
+	background-position-y:-158px;
+}

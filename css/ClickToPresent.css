@@ -1,0 +1,351 @@
+
+/* Click to Present */
+
+.clickToPresentContent p, .clickToPresentContent li {
+	font-size:12pt;
+}
+
+.textContent {
+	position: absolute;
+	top: 100px;
+	padding: 20px;
+	width: 368px;
+}
+
+.clickToPresentContent .text-panel {
+	position: absolute;
+}
+
+.sub-scene-image {
+	-webkit-box-shadow: 0px 0px 20px -5px #000;
+	box-shadow: 0px 0px 20px -5px #000;
+}
+
+.clickToPresentContent .scene {
+	visibility:hidden;
+	opacity:0;
+}
+
+.clickToPresentContent .intro-image {
+	position: absolute;
+	top: 130px;
+	left: 270px;
+}
+
+/*=== Scene 2000 specific ===*/
+
+#scene2000 .build-and-replace {
+	padding-right:10px;
+}
+
+
+.touch #scene2000 .textContent {
+	position: absolute;
+	top: 50px;
+	padding: 20px;
+	width: 368px;
+}
+
+
+#scene2000 .sub-scene-image {
+	position: absolute;
+	top: 30px;
+	left: 490px;
+}
+
+.touch #scene2000 .sub-scene-image {
+
+	top: 100px;
+}
+
+#scene2000 .clickToPresentContent .buttons {
+	position: absolute;
+	width: 250px;
+	top: 470px;
+	left: 60px;
+	z-index: 1;
+}
+
+.touch #scene2000 .clickToPresentContent .buttons {
+	top: 440px;
+}
+
+#scene2000 .clickToPresentContent .button {
+	width:58px;
+	height:58px;
+	display:inline-block;
+	background:url(../images/2000/buttons.png) 0 0 no-repeat;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2010{
+	background-position-x:0px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2020{
+	background-position-x:-58px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2030{
+	background-position-x:-116px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2040{
+	background-position-x:-232px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2050{
+	background-position-x:-290px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2060{
+	background-position-x:-174px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2070{
+	background-position-x:-348px;
+}
+
+#scene2000 .clickToPresentContent .buttons #button2080{
+	background-position-x:-406px;
+}
+
+/*=== Click to Present button states ===*/
+
+.no-touch #scene2000 .clickToPresentContent .button.enabled:hover {
+	cursor:pointer;
+	background-position-y:-58px;
+}
+
+#scene2000 .clickToPresentContent .buttons .button.active {
+	background-position-y:-58px;
+}
+
+#scene2000 .clickToPresentContent .button.completed
+{
+	background-position-y:-116px;
+}
+
+/*=== Click to Present bookmark states ===*/
+
+#scene2000 .button::after
+{
+	content:"";
+	background-image:url(../images/2000/buttons.png);
+	background-position:40px -390px;
+	width:22px;
+	height:22px;
+	overflow:hidden;
+	position:absolute;
+	margin-top: 0px;
+	margin-left:40px;
+	z-index:2;
+}
+
+#scene2000 .button.started::after
+{
+	background-position:40px -390px;
+}
+
+#scene2000 .button.completed::after
+{
+	background-position:0px -390px;
+}
+
+
+/*=== Scene 4100 specific ===*/
+
+#scene4100 .sub-scene-image {
+	position: absolute;
+	top: -30px;
+	left: 490px;
+}
+
+
+#scene4100 .intro-image {
+	position: absolute;
+	z-index: 1;
+	top: 375px;
+	left: 550px;
+}
+
+#scene4100 .clickToPresentContent .buttons {
+	position: absolute;
+	width: 250px;
+	top: 390px;
+	left: 30px;
+	z-index: 1;
+}
+
+#scene4100 .clickToPresentContent .button {
+	position: absolute;
+	width:69px;
+	height:69px;
+	background:url(../images/4000/buttons.png) 0 0 no-repeat;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4110{
+	left: 831px;
+	top: 91px;
+	background-position-x:0px;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4120{
+	left: 775px;
+	top: 14px;
+	background-position-x:-69px;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4130{
+	left: 649px;
+	top: -27px;
+	background-position-x:-138px;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4140{
+	left: 499px;
+	top: 20px;
+	background-position-x:-207px;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4150{
+	left: 559px;
+	top: 114px;
+	background-position-x:-276px;
+}
+
+#scene4100 .clickToPresentContent .buttons #button4160{
+	left: 679px;
+	top: 114px;
+	background-position-x:-345px;
+}
+
+/*=== Click to Present button states ===*/
+
+.no-touch #scene4100 .clickToPresentContent .button.enabled:hover {
+	cursor:pointer;
+	background-position-y:-69px;
+}
+
+#scene4100 .clickToPresentContent .buttons .button.active {
+	background-position-y:-69px;
+}
+
+#scene4100 .button.completed
+{
+	background-position-y:-138px;
+}
+
+/*=== Click to Present bookmark states ===*/
+
+#scene4100 .button::after
+{
+	content:"";
+	background-image:url(../images/4000/buttons.png);
+	background-position:40px -207px;
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	position:absolute;
+	margin-top: 0px;
+	right: 0px;
+	z-index:2;
+}
+
+#scene4100 .button.started::after
+{
+	background-position:40px -207px;
+}
+
+#scene4100 .button.completed::after
+{
+	background-position: -3px -210px;
+}
+
+
+/*=== Scene 5000 specific ===*/
+
+#scene5000 .sub-scene-image {
+	position: absolute;
+	top: 30px;
+	left: 490px;
+}
+
+#scene5000 .textContent.scene {
+	position: absolute;
+	top: 300px;
+	left: 450px;
+	padding: 20px;
+	width: 500px;
+}
+
+.touch #scene5000 .textContent.scene {
+	top: 300px;
+}
+
+#scene5000 .sub-scene-image {
+	top: -226px;
+	left: 24px;
+}
+
+#scene5000 .clickToPresentContent .buttons {
+	position: absolute;
+	width: 250px;
+	top: 340px;
+	left: 60px;
+	z-index: 1;
+}
+
+#scene5000 .clickToPresentContent .button {
+	width:255px;
+	height:62px;
+	background:url(../images/5000/buttons.png)0 0 no-repeat;
+}
+
+#scene5000 .clickToPresentContent .buttons #button5010{
+	background-position-x:0px;
+}
+
+#scene5000 .clickToPresentContent .buttons #button5020{
+	background-position-x:-255px;
+}
+
+#scene5000 .clickToPresentContent .buttons #button5030{
+	background-position-x:-510px;
+}
+
+/*=== Click to Present button states =============*/
+
+.no-touch #scene5000 .clickToPresentContent .button.enabled:hover {
+	cursor:pointer;
+	background-position-y:-62px;
+}
+
+#scene5000 .clickToPresentContent .buttons .button.active {
+	background-position-y:-62px;
+}
+
+/*=== Click to Present bookmark states ===========*/
+
+#scene5000 .button::after
+{
+	content:"";
+	background-image:url(../images/menu/legend.png);
+	background-position:-12px -13px;
+	width:22px;
+	height:21px;
+	overflow:hidden;
+	position:absolute;
+	margin-top:18px;
+	right:3px;
+	z-index:2;
+}
+
+#scene5000 .button.started:after
+{
+	background-position:-12px -48px;
+}
+
+#scene5000 .button.completed:after
+{
+	background-position:-12px -83px;
+}

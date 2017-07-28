@@ -1,0 +1,44 @@
+
+#s5100-1 {
+	position:absolute;
+	top:130px;
+	left:100px;
+}
+
+#s5100 {
+	position:absolute;
+	top:90px;
+	left:80px
+}
+
+#s5100-textcontent {
+	width:600px;
+	left:270px;
+	top:160px;
+}
+
+#simStartButton {
+	width:143px;
+	height:42px;
+	position:absolute;
+	top:350px;
+	left:215px;
+	background:url(../images/5000/start-button.png) top left no-repeat;
+}
+
+.no-touch #simStartButton:hover {
+	cursor:pointer;
+	background-position: bottom left;
+}
+
+#resourcePulse
+{
+	height: 55px;
+	width: 105px;
+	position: absolute;
+	top: 0px;
+	left: 680px;
+	z-index: 100000;
+	background: url(../images/topnav-buttons-pulse.gif) top left no-repeat;
+	background-position: -216px 0px;
+}

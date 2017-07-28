@@ -1,0 +1,67 @@
+<img src="images/text-panels/text-panel.png" style="position:absolute;top:0;left:0;">
+<img src="images/1000/1100a.png" style="position:absolute;left:321px;top:350px;" data-cue="5.8" data-cue-out="8.9:1101">
+<img src="images/1000/1100b.png" style="position:absolute;left:265px;top:379px;" data-cue="8.9:1101" data-preload="false">
+<img src="images/1000/1100c.png" style="position:absolute;left:538px;top:310px;" data-cue="22.4:1101" data-preload="false">
+<div class="textcontent" style="width:335px">
+	<h1>Kia CPO – Kia Dealership Benefits:</h1>
+	<div class="build-and-replace" data-cue='5.8' data-cue-out='8.9:1101'>
+		<h2>Competitive advantages:</h2>
+		<ul>
+			<li>Makes your dealership the best place to buy new AND <span class="nobr">pre-owned</span> Kia vehicles</li>
+			<li>Keeps <span class="nobr">high-quality</span> <span class="nobr">pre-owned</span> Kias off competitor&rsquo;s lots and on yours</li>
+			<li>Brings more customers and new, <span class="nobr">entry-level</span> buyers into your dealership</li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue='8.9:1101' data-cue-out='22.4:1101'>
+		<h2>Faster inventory turn:</h2>
+		<ul>
+			<li>CPO Vehicles = 41 days</li>
+			<li>Non-CPO used = 61 days</li>
+		</ul>
+	</div>
+	<div class="build-and-replace" data-cue='22.4:1101'>
+		<h2>CPO customers:</h2>
+		<ul>
+			<li>More loyal</li>
+			<li>More likely to buy F&I products</li>
+			<li>More likely to return to your dealership for service and parts</li>
+		</ul>
+	</div>
+</div>
+<aside>
+	<div id="cc1100">
+		Kia&rsquo;s rapidly growing CPO program offers a lot of important benefits for Kia dealerships.
+		{5.8}A strong CPO program establishes your dealership as the best place to buy new and used Kia vehicles.
+		{13.1}In fact, a strong CPO program helps keep that highly marketable, low-mileage, great condition pre-owned Kia vehicle off your competitor&rsquo;s lots and onto yours.
+	</div>
+    <div id="cc1101">
+        {0.3}And that, in turn, brings more customers into your dealership, including a lot of younger, entry-level buyers that you can welcome into the Kia family.
+        {8.9}CPO makes sense for your bottom line too.
+        {11.8}Industry research has found that CPO vehicles average 41 days to turn, while non-certified used vehicles average 61 days before being sold from your inventory.
+        {22.4}And once you earn a CPO sale, you&rsquo;ve got a great customer as part of the deal.
+    </div>
+    <div id="cc1102">
+        {0.6}CPO buyers are more loyal than traditional used or new vehicle buyers and will more often return to your dealership for their next purchase.
+        {10.1}They are also more likely to purchase additional F&I products, like extended warranties and service contracts, than traditional used vehicle buyers.
+        {18.7}And because CPO buyers have warranties on their vehicle, they are much more likely to return to you for their service and parts needs throughout their ownership period.
+    </div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.Scene();
+
+    scene.onSoundEnd = function () {
+        scene.play('1101', on1101Complete);
+    };
+
+    var on1101Complete = function () {
+        scene.play('1102', on1102Complete);
+    };
+
+    var on1102Complete = function () {
+        scene.markComplete();
+    };
+
+	es3.app.setSceneObject(scene);
+})();
+</script>

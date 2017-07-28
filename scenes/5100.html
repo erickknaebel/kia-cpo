@@ -1,0 +1,74 @@
+<img id="s5100-1" src="images/5000/5100-1.png"/>
+<img id="s5100" src="images/5000/5100.png"/>
+<div id="s5100-textcontent" class="textcontent">
+	<h1>Objection Simulation</h1>
+	<h2>Meet Maria</h2>
+	<ul>
+		<li>Originally shopping a brand new Kia vehicle</li>
+		<li>Discovered a 2-year-old CPO Kia vehicle that is a better fit for her budget</li>
+		<li data-cue="18.6">Current vehicle was purchased used and is now nearly 10 years old</li>
+		<li data-cue="18.6">Considering buying new due to the hassles experienced with current vehicle</li>
+		<li data-cue="4.5:5101">Hesitant on purchasing another pre-owned vehicle</li>
+	</ul>
+	<div data-cue="8.7:5101">
+		<h2>Simulation Instructions:</h2>
+		<p>For each objection, select the BEST possible response</p>
+	</div>
+	<div data-cue="16.6:5101" id="simStartButton"></div>
+</div>
+<aside>
+	<div id="cc5100">
+		Now that you have some strategies in hand, it’s time to see how well you can handle objections from a virtual customer.
+		{6.5}
+		Meet Maria. Maria came into your dealership shopping a brand new Kia vehicle.
+		{11.6}
+		While browsing the lot, she discovered a 2-year-old CPO Kia vehicle that is a better fit for her budget.
+		{18.6}
+		Maria’s current vehicle was purchased used and is now nearly 10 years old.
+		{23.2}
+		She was considering buying new due to the hassles she experienced with her current vehicle.
+	</div>
+    <div id="cc5101">
+        {0.3}
+        You have completed a well-organized Kia CPO walkaround, but Maria is still quite hesitant on purchasing another pre-owned vehicle.
+        {8.7}
+        In this simulation, you’ll be presented with several objections from Maria.
+        {13.1}
+        For each objection, select the BEST possible response.
+        {16.6}
+        When you’re ready to begin, select START.
+    </div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.Scene();
+	
+	scene.disableNext = true;
+	scene.imagesToPreload = [
+		'images/5000/start-button.png'
+	];
+
+	if(es3.configuration.DEBUG_MODE)
+	{
+		$('#simStartButton').css({opacity:1, visibility:'visible'})
+	};
+
+    scene.onSoundEnd = function() {
+        scene.play('5101', on5101Complete)
+    };
+
+    var on5101Complete = function () {
+        scene.markComplete();
+    };
+
+	var simStart = function()
+	{
+		es3.app.nextScene();
+	};
+
+	$('#simStartButton').on(TOUCHEVENT, simStart);
+
+	es3.app.setSceneObject(scene);
+
+})();
+</script>

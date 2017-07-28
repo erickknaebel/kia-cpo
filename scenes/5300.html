@@ -1,0 +1,60 @@
+<img src="images/text-panels/text-panel.png"/>
+<img data-cue-out="42.5" src="images/5000/5300.png" style="position:absolute;top:264px;left:220px" />
+<img data-cue="42.5" src="images/5000/5300-1.jpg" style="position:absolute;top:100px;left:463px" />
+<div id="resourcePulse" data-cue="20.5:5301" data-cue-out="24.2:5301"></div>
+<div class="textcontent" style="width:335px">
+	<h1>Wrap-Up</h1>
+	<div class="build-and-replace" data-cue-out="17.8">
+		<p>Great job handling those tough objections! Your quick thinking helped earn Maria’s confidence and seal the deal. She is now the satisfied new owner of a CPO Kia vehicle!</p>
+	</div>
+	<div class="build-and-replace" data-cue="17.8">
+		<h2>In this course, you learned:</h2>
+		<ul>
+			<li>The key features and benefits of the Kia Certified Pre-Owned program</li>
+			<li data-cue="0.4:5301">The unique traits and motivations that differentiate a CPO buyer from a <span class="nobr">new-vehicle</span> buyer</li>
+			<li data-cue="6.4:5301">How to communicate the features, benefits and value of Kia CPO throughout the sales process</li>
+			<li data-cue="12.8:5301">Tactics to successfully handle common CPO customer objections</li>
+		</ul>
+		<h2 data-cue="17.6:5301">Resources:</h2>
+		<ul data-cue="17.6:5301">
+			<li>Kia CPO Customer Brochure</li>
+			<li>Kia COP Window Sticker</li>
+			<li>Kia CPO Best Practices</li>
+		</ul>
+	</div>
+</div>
+<aside>
+	<div id="cc5300">
+		Great job handling those tough objections!
+		{2.7}Your quick thinking helped earn Maria’s confidence and seal the deal.
+		{6.7}She is now the satisfied new owner of a CPO Kia vehicle!
+		{10.8}As you’ve seen throughout this course, selling Kia Certified Pre-Owned comes with a unique set of challenges and opportunities.
+		{18.0}Upon completing this course, you have learned:
+		{20.2}The key features and customer benefits of the Kia Certified Pre-Owned program…
+	</div>
+    <div id="cc5301">
+        {0.4}The unique traits and motivations that differentiate a CPO buyer from a new-vehicle buyer…
+        {6.4}How to communicate the features, benefits and value of Kia CPO throughout the sales process…
+        {12.8}And tactics to successfully handle common CPO customer objections.
+        {17.6}To further expand your Kia CPO knowledge, be sure to take advantage of the materials available in the Resources tab.
+    </div>
+</aside>
+<script>
+(function(){
+	var scene = new es3.Scene();
+	
+	scene.imagesToPreload = [
+		'images/topnav-buttons-pulse.gif'
+	];
+
+    scene.onSoundEnd = function () {
+        scene.play('5301', on5301Complete)
+    };
+
+    var on5301Complete = function () {
+        scene.markComplete();
+    };
+	
+	es3.app.setSceneObject(scene);
+})();
+</script>

@@ -1,0 +1,46 @@
+<img src="images/splash/ku-logo.png" style="position:absolute; left:20px; top:20px;">
+<div id="splashPanel">
+	<div id="splashStartButton"></div>
+	<div id="splashText">
+		<p>
+			In this course, you will learn the unique motivations and interests of certified pre-owned customers and how to customize your vehicle presentations and sales conversations to earn more CPO sales.
+		</p>
+		<p>
+			In addition to the key features and benefits of the Kia CPO program, you’ll learn how to recognize and effectively respond to typical certified customer questions and objections.
+		</p>
+		<p>
+			For Closed Captioning functionality, please enable CC from the bottom navigation bar.
+		</p>
+	</div>
+</div>
+<script>
+(function(){
+	var scene = new es3.SilentScene();
+	
+	scene.displayBanner		= false;
+	scene.displayFooter		= false;
+	scene.displayCourseInfo	= false;
+	
+	scene.imagesToPreload = [
+		'images/splash/splash-panel.png',
+		'images/splash/start-button.png'
+	];
+
+	var clickStartButton = function()
+	{
+		es3.app.gotoScene('menu');
+	};
+
+	scene.onStart = function()
+	{
+		$('#splashStartButton').one(TOUCHEVENT, clickStartButton);
+	};
+	
+	scene.onDispose = function()
+	{
+		$('#splashStartButton').off(TOUCHEVENT);
+	};
+
+	es3.app.setSceneObject(scene);
+})();
+</script>

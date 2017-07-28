@@ -1,0 +1,59 @@
+<div class="knowledgeCheckContent" data-correct-audio="2122" data-incorrect-audio="incorrect">
+	<table class="buttons">
+		<tr>
+			<td class="button" id="benefits" data-load-scene="2010"></td>
+			<td class="label">Additional Benefits</td>
+		</tr>
+		<tr>
+			<td class="button" id="roadside" data-load-scene="2020" data-correct="true"></td>
+			<td class="label">Kia 10-Year Unlimited Mileage Roadside Assistance</td>
+		</tr>
+		<tr>
+			<td class="button" id="report" data-load-scene="2030"></td>
+			<td class="label">CARFAX<sup>&reg;</sup> Vehicle History Report&trade;</td>
+		</tr>
+		<tr>
+			<td class="button" id="eligible" data-load-scene="2040"></td>
+			<td class="label">Eligible Vehicles</td>
+		</tr>
+		<tr>
+			<td class="button" id="inspection" data-load-scene="2050"></td>
+			<td class="label">150-Point Quality Assurance Inspection</td>
+		</tr>
+		<tr>
+			<td class="button" id="warranty" data-load-scene="2060"></td>
+			<td class="label">10-Year/100,000-Mile Limited Powertrain Warranty</td>
+		</tr>
+	</table>
+	<div class="content">
+		<h1 class="scene-header">Knowledge Check</h1>
+		<p class="instructions">Select the Kia CPO element that BEST addresses the customer&rsquo;s statement.</p>
+		<div class="customer-statement">
+			<div class="icon"></div>
+			<p class="statement">&ldquo;My last pre-owned car broke down a lot. The last thing I need is to get stranded again. I need something I can trust.&rdquo;</p>
+		</div>
+		<div class="remediation correct">
+			<h1>Correct!</h1>
+			<h2>Kia 10 Year Unlimited Mileage Roadside Assistance</h2>
+			<p>Kia CPO customers need not worry about getting stranded on the road. All Kia CPO vehicles include complimentary Cross Country Motor Club Membership for roadside assistance covering common problems like jump starts, flat-tires, gas delivery or lockouts.</p>
+		</div>
+		<div class="remediation incorrect">
+			<h1>Try Again!</h1>
+		</div>
+		<aside>
+			<div id="cc2122">
+				{1.2}
+				Smart choice. Kia CPO customers need not worry about getting stranded on the road.
+				{6.8}
+				All Kia CPO vehicles include complimentary Cross Country Motor Club Membership for roadside assistance covering common problems like jump starts, flat-tires, gas delivery or lockouts.
+			</div>
+		</aside>
+	</div>
+</div>
+<script>
+	(function(){
+		var scene = new es3.KnowledgeCheck();
+		scene.imagesToPreload = ['images/knowledge-check/buttons.png','images/knowledge-check/2100.png'];
+		es3.app.setSceneObject(scene);
+	})();
+</script>
